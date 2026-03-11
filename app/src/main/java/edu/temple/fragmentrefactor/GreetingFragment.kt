@@ -6,9 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import edu.temple.fragmentrefactor.databinding.FragmentGreetingBinding;
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+import edu.temple.fragmentrefactor.databinding.FragmentGreetingBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -17,7 +15,7 @@ import edu.temple.fragmentrefactor.databinding.FragmentGreetingBinding;
  */
 class GreetingFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private var _binding: FragmentGreetingBinding? = null;
+    private var _binding: FragmentGreetingBinding? = null
     private val binding get() = _binding!!
 
 
@@ -25,7 +23,6 @@ class GreetingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_greeting, container, false)
     }
 
@@ -42,17 +39,14 @@ class GreetingFragment : Fragment() {
     }
 
     companion object {
-        private val ARG_MESSAGE: String = "message";
+        private const val ARG_MESSAGE: String = "message"
 
         /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param message Parameter 1.
+         * @param message Message.
          * @return A new instance of fragment GreetingFragment.
          */
         // TODO: Rename and change types and number of parameters
-        @JvmStatic
+        //@JvmStatic
         fun newInstance(message: String) =
             GreetingFragment().apply {
                 Log.d("new instant","initializing ${message}")
